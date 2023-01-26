@@ -10,7 +10,9 @@
 
 <body>
 
-
+    <?php
+    include __DIR__ . '/partials/functions.php';
+    ?>
 
     <header>
         <h1>Password Generator</h1>
@@ -24,30 +26,10 @@
         </form>
 
         <?php
-
-
-        function getRandomPassword()
-        {
-            $passwordLength = $_GET["password-length"];
-
-            $password = "";
-            $characters = "abcdABCD1234&%!#";
-
-            while (strlen($password) <= $passwordLength - 1) {
-
-
-
-                $password .= $characters[random_int(0, strlen($characters) - 1)];
-            }
-
-            return $password;
-        }
-
+        echo "<p>";
         echo getRandomPassword();
-
-
+        echo "</p>";
         ?>
-
     </main>
 </body>
 
