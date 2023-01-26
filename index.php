@@ -30,11 +30,11 @@
         $password = "";
         $characters = "abcdABCD1234&%!#";
 
-        while (strlen($password) <= $passwordLength - 1 && $passwordLength <= $characters) {
+        while (strlen($password) <= $passwordLength - 1) {
 
 
 
-            $password .= $characters[random_int(0, $passwordLength - 1)];
+            $password .= $characters[random_int(0, strlen($characters))];
         }
 
         echo $password;
